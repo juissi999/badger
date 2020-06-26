@@ -46,29 +46,7 @@ export default {
   name: 'MainPage',
 
   data: () => ({
-    numberToday: 0,
-    importantLinks: [
-      {
-        text: 'Documentation',
-        href: 'https://vuetifyjs.com'
-      },
-      {
-        text: 'Chat',
-        href: 'https://community.vuetifyjs.com'
-      },
-      {
-        text: 'Made with Vuetify',
-        href: 'https://madewithvuejs.com/vuetify'
-      },
-      {
-        text: 'Twitter',
-        href: 'https://twitter.com/vuetifyjs'
-      },
-      {
-        text: 'Articles',
-        href: 'https://medium.com/vuetify'
-      }
-    ]
+    numberToday: 0
   }),
   methods: {
     addVisitor (howmany) {
