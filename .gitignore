@@ -1,3 +1,19 @@
+# from vue-cli
+
+.DS_Store
+/dist
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# /from vue-cli
+
 # Logs
 logs
 *.log
