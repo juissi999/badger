@@ -35,6 +35,7 @@
           <v-btn @click="addVisitor(1)">Add 1</v-btn>
           <v-btn @click="addVisitor(5)">Add 5</v-btn>
           <v-btn @click="substractVisitor(1)">Remove 1</v-btn>
+          <PopUp />
         </v-row>
       </v-col>
     </v-row>
@@ -42,12 +43,13 @@
 </template>
 
 <script>
+import PopUp from './PopUp'
+
 export default {
   name: 'MainPage',
 
-  data: () => ({
-    numberToday: 0
-  }),
+  components: { PopUp },
+  data: () => ({}),
   methods: {
     addVisitor (howmany) {
       this.$store.commit('increment', howmany)
