@@ -38,18 +38,39 @@
           <PopUp />
         </v-row>
       </v-col>
+
+      <v-card class="mx-auto" max-width="400">
+        <SumChart :chartdata="datacollection" :options="options" />
+      </v-card>
     </v-row>
   </v-container>
 </template>
 
 <script>
 import PopUp from './PopUp'
+import SumChart from './SumChart'
 
 export default {
   name: 'MainPage',
 
-  components: { PopUp },
-  data: () => ({}),
+  components: { PopUp, SumChart },
+  data: () => ({
+    datacollection: {
+      labels: ['0s', '10s', '20s', '30s', '40s', '50s', '60s'],
+      datasets: [
+        {
+          label: 'Car Speed',
+          data: [0, 59, 75, 20, 20, 55, 40]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Ticks on timeline'
+      }
+    }
+  }),
   methods: {
     addVisitor (howmany) {
       this.$store.commit('increment', howmany)
