@@ -34,23 +34,23 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld />
+      <MainPage />
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import MainPage from './components/MainPage.vue'
 
 export default {
-  name: "App",
+  name: 'App',
 
   components: {
-    HelloWorld
+    MainPage
   },
 
   data: () => ({
     //
   })
-};
+}
 </script>
