@@ -26,7 +26,7 @@
         </h2>
 
         <v-row justify="center"
-          ><h1>{{ numberToday }}</h1></v-row
+          ><h1>{{ this.$store.state.count }}</h1></v-row
         >
       </v-col>
 
@@ -50,11 +50,10 @@ export default {
   }),
   methods: {
     addVisitor (howmany) {
-      this.numberToday += howmany
+      this.$store.commit('increment', howmany)
     },
     substractVisitor (howmany) {
-      const newVisitors = this.numberToday - howmany
-      newVisitors >= 0 ? (this.numberToday = newVisitors) : 0
+      this.$store.commit('decrement', howmany)
     }
   }
 }
