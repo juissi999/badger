@@ -5,18 +5,19 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    count: 0
+    count: []
   },
   mutations: {
     increment (state, n) {
-      state.count += n
+      for (let i = 0; i < n; i++) {
+        state.count.push(new Date())
+      }
     },
-    decrement (state, n) {
-      const newCount = state.count - n
-      newCount >= 0 ? (state.count = newCount) : (state.count = 0)
+    decrement (state) {
+      state.count.length > 0 ? state.count.pop() : (state.count = [])
     },
     reset (state) {
-      state.count = 0
+      state.count = []
     }
   },
   actions: {},

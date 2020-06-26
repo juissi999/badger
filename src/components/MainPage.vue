@@ -26,7 +26,7 @@
         </h2>
 
         <v-row justify="center"
-          ><h1>{{ this.$store.state.count }}</h1></v-row
+          ><h1>{{ this.$store.state.count.length }}</h1></v-row
         >
       </v-col>
 
