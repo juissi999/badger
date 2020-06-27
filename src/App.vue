@@ -32,17 +32,20 @@
     <v-main>
       <MainPage />
     </v-main>
+    <Footer />
   </v-app>
 </template>
 
 <script>
-import MainPage from './components/MainPage.vue'
+import MainPage from './components/MainPage'
+import Footer from './components/Footer'
 
 export default {
   name: 'App',
 
   components: {
-    MainPage
+    MainPage,
+    Footer
   },
 
   data: () => ({
