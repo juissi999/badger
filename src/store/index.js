@@ -18,6 +18,15 @@ export default new Vuex.Store({
     },
     reset (state) {
       state.count = []
+    },
+    initialiseStore (state) {
+      // Check if the ID exists
+      if (localStorage.getItem('badgerStore')) {
+        // Replace the state object with the stored item
+        this.replaceState(
+          Object.assign(state, JSON.parse(localStorage.getItem('badgerStore')))
+        )
+      }
     }
   },
   actions: {},
