@@ -2,7 +2,7 @@
   <v-container>
     <v-row class="text-center">
       <v-col cols="12" class="pa-0 pa-md-5">
-        <v-flex xs4 offset-xs4 sm6 offset-sm3>
+        <v-flex xs2 offset-xs5 sm6 offset-sm3>
           <v-img
             :src="require('../assets/logo.png')"
             contain
@@ -29,8 +29,8 @@
         </v-row>
       </v-col>
 
-      <v-col class="mb-5" cols="12">
-        <h2 class="headline font-weight-bold mb-3">
+      <v-col class="mb-0 mb-md-5" cols="12">
+        <h2 class="headline font-weight-bold mb-1 mb-md-3">
           Today's number
         </h2>
 
