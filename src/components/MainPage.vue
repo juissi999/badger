@@ -45,21 +45,21 @@
         </v-row>
       </v-col>
 
-      <v-card class="mx-auto" max-width="400">
+      <!-- <v-card class="mx-auto" max-width="400">
         <SumChart :chartdata="datacollection" :options="options" />
-      </v-card>
+      </v-card> -->
     </v-row>
   </v-container>
 </template>
 
 <script>
 import PopUp from './PopUp'
-import SumChart from './SumChart'
+// import SumChart from './SumChart'
 
 export default {
   name: 'MainPage',
 
-  components: { PopUp, SumChart },
+  components: { PopUp },
   data: () => ({
     datacollection: {
       datasets: [
