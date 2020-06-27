@@ -23,7 +23,7 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn href="/" target="_blank" text>
+      <v-btn href="/" text>
         <span class="mr-2">Landing page</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
