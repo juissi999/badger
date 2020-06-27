@@ -21,6 +21,15 @@
       </v-col>
 
       <v-col class="mb-5" cols="12">
+        <v-row justify="center">
+          <v-btn @click="addVisitor(1)" class="primary mx-1 my-1">Add 1</v-btn>
+          <v-btn @click="addVisitor(5)" class="mx-1 my-1">Add 5</v-btn>
+          <v-btn @click="substractVisitor(1)" class="mx-1 my-1">Remove 1</v-btn>
+          <PopUp />
+        </v-row>
+      </v-col>
+
+      <v-col class="mb-5" cols="12">
         <h2 class="headline font-weight-bold mb-3">
           Today's number
         </h2>
@@ -28,15 +37,6 @@
         <v-row justify="center"
           ><h1>{{ this.$store.state.count.length }}</h1></v-row
         >
-      </v-col>
-
-      <v-col class="mb-5" cols="12">
-        <v-row justify="center">
-          <v-btn @click="addVisitor(1)" class="primary mx-1">Add 1</v-btn>
-          <v-btn @click="addVisitor(5)" class="mx-1">Add 5</v-btn>
-          <v-btn @click="substractVisitor(1)" class="mx-1">Remove 1</v-btn>
-          <PopUp />
-        </v-row>
       </v-col>
 
       <v-card class="mx-auto" max-width="400">
@@ -56,18 +56,38 @@ export default {
   components: { PopUp, SumChart },
   data: () => ({
     datacollection: {
-      labels: ['0s', '10s', '20s', '30s', '40s', '50s', '60s'],
       datasets: [
         {
-          label: 'Car Speed',
-          data: [0, 59, 75, 20, 20, 55, 40]
+          label: 'Clients',
+
+          data: [
+            {
+              x: new Date(),
+              y: 1
+            },
+            {
+              t: new Date(),
+              y: 10
+            }
+          ]
         }
       ]
     },
     options: {
       title: {
         display: true,
-        text: 'Ticks on timeline'
+        text: 'Ticks on timeline',
+
+        scales: {
+          xAxes: [
+            {
+              type: 'time',
+              time: {
+                distribution: 'series'
+              }
+            }
+          ]
+        }
       }
     }
   }),
