@@ -1,7 +1,7 @@
 <template>
   <v-dialog v-model="dialog" persistent max-width="290">
     <template v-slot:activator="{ on }">
-      <v-btn class="secondary my-1" dark v-on="on">Reset counter</v-btn>
+      <v-btn class="red my-1" dark v-on="on">Reset</v-btn>
     </template>
     <v-card>
       <v-card-title class="headline">Reset counter?</v-card-title>
