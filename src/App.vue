@@ -23,17 +23,17 @@
         </div>
 
         <v-spacer></v-spacer>
-
-        <v-btn @click="$router.push('about')" text>
+        <v-btn @click="changePage('/about')" text>
           <span class="mr-2">about</span>
           <v-icon>mdi-alphabetical</v-icon>
         </v-btn>
-        <v-btn @click="$router.push('chart')" text>
+        <v-btn @click="changePage('/chart')" text>
           <span class="mr-2">chart</span>
           <v-icon>mdi-chart-line</v-icon>
         </v-btn>
-        <v-btn @click="$router.push('/')" text>
-          <span class="mr-2">app</span>
+        <v-btn @click="changePage('/')" text>
+          <!-- <v-btn @click="$router.push('/')" text v-if="this.$route.path !== '/'"> -->
+          <span class="mr-2">home</span>
           <v-icon>mdi-counter</v-icon>
         </v-btn>
       </v-app-bar>
@@ -53,7 +53,15 @@ export default {
   name: 'App',
 
   components: { Footer },
-
+  methods: {
+    changePage (goto) {
+      // this function checks that the link does not forward the user to the
+      // same page he left. Fixes vue router NavigationDuplicated error.
+      if (this.$route.path !== goto) {
+        this.$router.push(goto)
+      }
+    }
+  },
   data: () => ({
     //
   })
