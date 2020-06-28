@@ -25,8 +25,12 @@
         <v-spacer></v-spacer>
 
         <v-btn @click="$router.push('about')" text>
-          <span class="mr-2">About</span>
+          <span class="mr-2">about</span>
           <v-icon>mdi-alphabetical</v-icon>
+        </v-btn>
+        <v-btn @click="$router.push('chart')" text>
+          <span class="mr-2">chart</span>
+          <v-icon>mdi-chart-line</v-icon>
         </v-btn>
         <v-btn @click="$router.push('/')" text>
           <span class="mr-2">app</span>
