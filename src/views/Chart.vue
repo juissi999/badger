@@ -24,7 +24,7 @@ export default {
       //return store.state.count
       let allCount = 0
       const data = {
-        labels: this.$store.state.count.map(el => new Date(el)),
+        // labels: this.$store.state.count.map(el => new Date(el)),
         datasets: [
           {
             label: 'Ticks',
