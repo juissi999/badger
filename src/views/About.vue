@@ -9,10 +9,10 @@
         <v-flex sm8 offset-sm2>
           <p>
             Count tick manually from events, visitors, vehicles... App remembers
-            your number and you can substract a false click. More functionality
-            to come. Visit my page
-            <a href="github.com/juissi999">juissi999@github</a> and give me a
-            like please!
+            count event if you lose the page. You can also substract false
+            clicks from the count. More functionality to come. Visit my page
+            <a href="http://github.com/juissi999">juissi999@github</a> to see my
+            other projects and give me a star if you like this app!
           </p>
         </v-flex>
       </v-col>
