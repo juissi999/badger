@@ -1,52 +1,54 @@
 <template>
-  <v-app>
+  <div id="app">
+    <v-app>
       <v-app-bar absolute app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          :src="require('./assets/logo.png')"
-          transition="scale-transition"
-          width="40"
-        />
+        <div class="d-flex align-center">
+          <v-img
+            alt="Vuetify Logo"
+            class="shrink mr-2"
+            contain
+            :src="require('./assets/logo.png')"
+            transition="scale-transition"
+            width="40"
+          />
 
-        <span
-          alt="badger Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          width="100"
-          >badger</span
-        >
-      </div>
+          <span
+            alt="badger Name"
+            class="shrink mt-1 hidden-sm-and-down"
+            contain
+            min-width="100"
+            width="100"
+            >badger</span
+          >
+        </div>
 
-      <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
 
-      <v-btn href="/" text>
-        <span class="mr-2">Landing page</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <MainPage />
-    </v-main>
-    <Footer />
-  </v-app>
+        <v-btn @click="$router.push('about')" text>
+          <span class="mr-2">About</span>
+          <v-icon>mdi-alphabetical</v-icon>
+        </v-btn>
+        <v-btn @click="$router.push('/')" text>
+          <span class="mr-2">app</span>
+          <v-icon>mdi-counter</v-icon>
+        </v-btn>
+      </v-app-bar>
+      <v-main>
+        <router-view />
+      </v-main>
+      <v-footer absolute>
+        <Footer />
+      </v-footer>
+    </v-app>
+  </div>
 </template>
 
 <script>
-import MainPage from './components/MainPage'
 import Footer from './components/Footer'
-
 export default {
   name: 'App',
 
-  components: {
-    MainPage,
-    Footer
-  },
+  components: { Footer },
 
   data: () => ({
     //
