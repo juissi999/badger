@@ -5,49 +5,53 @@
         <h1 class="display-2 font-weight-bold mb-1 mb-md-3">Chart</h1>
       </v-col>
     </v-row>
-    <v-card class="mx-auto" max-width="400">
-      <SumChart :chartdata="datacollection" :options="options" />
+    <v-card class="mx-auto" max-width="600">
+      <SumChart :chartdata="count" :options="options" />
     </v-card>
   </v-container>
 </template>
 
 <script>
 import SumChart from '../components/SumChart'
+
 export default {
   components: { SumChart },
+  computed: {
+    count () {
+      //return store.state.count
+      let allCount = 0
+      const data = {
+        labels: this.$store.state.count.map(el => new Date(el)),
+        datasets: [
+          {
+            label: 'Clients',
+            borderColor: '#8e5ea2',
+            data: this.$store.state.count.map(el => {
+              allCount++
+              return { t: new Date(el), y: allCount }
+            })
+          }
+        ]
+      }
+      return data
+    }
+  },
   data: () => ({
-    datacollection: {
-      datasets: [
-        {
-          label: 'Clients',
-          data: [
-            {
-              x: new Date(),
-              y: 1
-            },
-            {
-              t: new Date(),
-              y: 10
-            }
-          ]
-        }
-      ]
-    },
     options: {
       title: {
         display: true,
-        text: 'Ticks on timeline',
-
-        scales: {
-          xAxes: [
-            {
-              type: 'time',
-              time: {
-                distribution: 'series'
-              }
+        text: 'Ticks on timeline'
+      },
+      scales: {
+        xAxes: [
+          {
+            type: 'time',
+            distribution: 'linear',
+            ticks: {
+              source: 'auto'
             }
-          ]
-        }
+          }
+        ]
       }
     }
   })
