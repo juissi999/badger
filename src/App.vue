@@ -24,16 +24,16 @@
 
         <v-spacer></v-spacer>
         <v-btn @click="changePage('/about')" text>
-          <span class="mr-2">about</span>
+          <span class="mr-2 hidden-md-and-down">about</span>
           <v-icon>mdi-alphabetical</v-icon>
         </v-btn>
         <v-btn @click="changePage('/chart')" text>
-          <span class="mr-2">chart</span>
+          <span class="mr-2 hidden-md-and-down">chart</span>
           <v-icon>mdi-chart-line</v-icon>
         </v-btn>
         <v-btn @click="changePage('/')" text>
           <!-- <v-btn @click="$router.push('/')" text v-if="this.$route.path !== '/'"> -->
-          <span class="mr-2">home</span>
+          <span class="mr-2 hidden-md-and-down">home</span>
           <v-icon>mdi-counter</v-icon>
         </v-btn>
       </v-app-bar>
