@@ -16,7 +16,7 @@
           <p>
             Visit my page
             <a href="http://github.com/juissi999">juissi999@github</a> to see my
-            other projects and give me a star if you like this app!
+            other projects!
           </p>
         </v-flex>
       </v-col>
