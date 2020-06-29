@@ -40,7 +40,7 @@
       <v-main>
         <router-view />
       </v-main>
-      <v-footer absolute>
+      <v-footer>
         <Footer />
       </v-footer>
     </v-app>
