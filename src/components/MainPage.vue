@@ -35,7 +35,7 @@
         </h2>
 
         <v-row justify="center">
-          <h1>{{ this.$store.state.count.length }}</h1>
+          <h1>{{ this.$store.state.ticks.length }}</h1>
         </v-row>
       </v-col>
 

@@ -3,9 +3,9 @@ import { Line } from 'vue-chartjs'
 
 export default {
   extends: Line,
-  props: ['chartdata', 'options'],
+  props: ['data', 'options'],
   mounted () {
-    this.renderChart(this.chartdata, this.options)
+    this.renderChart(this.data, this.options)
   }
 }
 </script>

@@ -6,7 +6,7 @@
       </v-col>
     </v-row>
     <v-card class="mx-auto" max-width="600">
-      <SumChart :chartdata="count" :options="options" />
+      <SumChart :data="chartdata" :options="options" />
     </v-card>
   </v-container>
 </template>
@@ -17,8 +17,7 @@ import SumChart from '../components/SumChart'
 export default {
   components: { SumChart },
   computed: {
-    count () {
-      //return store.state.count
+    chartdata () {
       let allCount = 0
       const data = {
         // labels: this.$store.state.count.map(el => new Date(el)),
@@ -26,7 +25,7 @@ export default {
           {
             label: 'Ticks',
             borderColor: '#8e5ea2',
-            data: this.$store.state.count.map(el => {
+            data: this.$store.state.ticks.map(el => {
               allCount++
               return { t: new Date(el), y: allCount }
             })

@@ -5,19 +5,19 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    count: []
+    ticks: []
   },
   mutations: {
     increment (state, n) {
       for (let i = 0; i < n; i++) {
-        state.count.push(new Date())
+        state.ticks.push(new Date())
       }
     },
     decrement (state) {
-      state.count.length > 0 ? state.count.pop() : (state.count = [])
+      state.ticks.length > 0 ? state.ticks.pop() : (state.ticks = [])
     },
     reset (state) {
-      state.count = []
+      state.ticks = []
     },
     initialiseStore (state) {
       // Check if the ID exists
