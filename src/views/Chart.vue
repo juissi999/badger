@@ -1,11 +1,8 @@
 <template>
   <v-container>
     <v-row class="text-center">
-      <v-col class="mb-3 ma-md-4 pa-0 pa-md-5">
+      <v-col class="ma-2 ma-md-4 pa-0 pa-md-5">
         <h1 class="display-2 font-weight-bold mb-1 mb-md-3">Chart</h1>
-        <p class="subheading font-weight-regular mb-0 mb-md-3">
-          Displays a sum chart of ticks (y-axis) against time (x-axis).
-        </p>
       </v-col>
     </v-row>
     <v-card class="mx-auto" max-width="600">
