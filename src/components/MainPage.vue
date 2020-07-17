@@ -23,9 +23,13 @@
 
       <v-col class="mb-0 mb-md-5" cols="12">
         <v-row justify="center">
-          <v-btn @click="addVisitor(1)" class="primary mx-1 my-1">Add 1</v-btn>
-          <v-btn @click="addVisitor(5)" class="mx-1 my-1">Add 5</v-btn>
-          <v-btn @click="substractVisitor(1)" class="mx-1 my-1">Remove 1</v-btn>
+          <v-btn @click="addVisitor(1)" class="primary mx-1 my-1" x-large
+            >Add 1</v-btn
+          >
+          <v-btn @click="addVisitor(5)" class="mx-1 my-1" x-large>Add 5</v-btn>
+          <v-btn @click="substractVisitor(1)" class="mx-1 my-1" x-large>
+            Remove 1
+          </v-btn>
         </v-row>
       </v-col>
 
