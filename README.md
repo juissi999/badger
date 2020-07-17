@@ -29,3 +29,4 @@ Host the site with e.g. simple python server.
 - vuex
 - vuetify
 - chart.js
+- Progressive web app design
