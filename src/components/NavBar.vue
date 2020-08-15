@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar absolute app color="secondary" flat dark>
+  <v-app-bar absolute app color="light" flat>
     <div class="d-flex align-center">
       <v-img
         alt="Vuetify Logo"
@@ -35,7 +35,7 @@
       <v-icon>mdi-alphabetical</v-icon>
     </v-btn>
     <v-btn @click="toggleDarkMode" text>
-      <span class="mr-2 hidden-md-and-down">mode</span>
+      <span class="mr-2 hidden-md-and-down">dark mode</span>
       <v-icon>mdi-brightness-3</v-icon>
     </v-btn>
   </v-app-bar>
