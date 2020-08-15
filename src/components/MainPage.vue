@@ -57,9 +57,7 @@ import PopUp from './PopUp'
 
 export default {
   name: 'MainPage',
-
   components: { PopUp },
-
   methods: {
     addVisitor (howmany) {
       this.$store.commit('increment', howmany)

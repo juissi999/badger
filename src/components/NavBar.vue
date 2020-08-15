@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar absolute app color="light" flat>
+  <v-app-bar absolute app :color="color" flat>
     <div class="d-flex align-center">
       <v-img
         alt="Vuetify Logo"
@@ -43,6 +43,7 @@
 <script>
 export default {
   name: 'NavBar',
+  props: ['color'],
   methods: {
     changePage (goto) {
       // this function checks that the link does not forward the user to the

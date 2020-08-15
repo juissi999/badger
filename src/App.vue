@@ -1,13 +1,11 @@
 <template>
   <div id="app">
     <v-app>
-      <NavBar />
+      <NavBar color="light" />
       <v-main>
         <router-view />
       </v-main>
-      <v-footer>
-        <Footer />
-      </v-footer>
+      <Footer color="light" />
     </v-app>
   </div>
 </template>
