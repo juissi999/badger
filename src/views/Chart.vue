@@ -6,7 +6,7 @@
       </v-col>
     </v-row>
     <v-card class="mx-auto" max-width="600">
-      <SumChart :data="chartdata" :options="options" />
+      <SumChart :chart-data="chartdata" :options="options" />
     </v-card>
   </v-container>
 </template>
@@ -17,14 +17,14 @@ import SumChart from '../components/SumChart'
 export default {
   components: { SumChart },
   computed: {
-    chartdata () {
+    chartdata: function () {
       let allCount = 0
       const data = {
         // labels: this.$store.state.count.map(el => new Date(el)),
         datasets: [
           {
             label: 'Ticks',
-            borderColor: '#8e5ea2',
+            borderColor: this.$vuetify.theme.currentTheme.accent,
             data: this.$store.state.ticks.map(el => {
               allCount++
               return { t: new Date(el), y: allCount }
@@ -35,24 +35,26 @@ export default {
       return data
     }
   },
-  data: () => ({
-    options: {
-      title: {
-        display: true,
-        text: 'Ticks on timeline'
-      },
-      scales: {
-        xAxes: [
-          {
-            type: 'time',
-            distribution: 'linear',
-            ticks: {
-              source: 'auto'
+  data: function () {
+    return {
+      options: {
+        title: {
+          display: true,
+          text: 'Ticks on timeline'
+        },
+        scales: {
+          xAxes: [
+            {
+              type: 'time',
+              distribution: 'linear',
+              ticks: {
+                source: 'auto'
+              }
             }
-          }
-        ]
+          ]
+        }
       }
     }
-  })
+  }
 }
 </script>
