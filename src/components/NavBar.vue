@@ -23,20 +23,20 @@
     <v-spacer></v-spacer>
     <v-btn @click="changePage('/')" text>
       <!-- <v-btn @click="$router.push('/')" text v-if="this.$route.path !== '/'"> -->
-      <span class="mr-2 hidden-md-and-down">home</span>
-      <v-icon>mdi-counter</v-icon>
+      <span class="hidden-md-and-down">home</span>
+      <v-icon class="hidden-lg-and-up">mdi-counter</v-icon>
     </v-btn>
     <v-btn @click="changePage('/chart')" text>
-      <span class="mr-2 hidden-md-and-down">chart</span>
-      <v-icon>mdi-chart-line</v-icon>
+      <span class="hidden-md-and-down">chart</span>
+      <v-icon class="hidden-lg-and-up">mdi-chart-line</v-icon>
     </v-btn>
     <v-btn @click="changePage('/about')" text>
-      <span class="mr-2 hidden-md-and-down">about</span>
-      <v-icon>mdi-alphabetical</v-icon>
+      <span class="hidden-md-and-down">about</span>
+      <v-icon class="hidden-lg-and-up">mdi-alphabetical</v-icon>
     </v-btn>
     <v-btn @click="toggleDarkMode" text>
-      <span class="mr-2 hidden-md-and-down">dark mode</span>
-      <v-icon>mdi-brightness-3</v-icon>
+      <span class="hidden-md-and-down">dark mode</span>
+      <v-icon class="hidden-lg-and-up">mdi-brightness-3</v-icon>
     </v-btn>
   </v-app-bar>
 </template>
