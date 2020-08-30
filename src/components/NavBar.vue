@@ -54,6 +54,7 @@ export default {
     },
     toggleDarkMode () {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark
+      this.$store.commit('toggleDarkMode', this.$vuetify.theme.dark)
     }
   }
 }

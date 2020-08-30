@@ -8,7 +8,7 @@ Vue.config.productionTip = false
 
 // Subscribe to store updates
 store.subscribe((mutation, state) => {
-  // Store the state object as a JSON string
+  // Store the state object as a JSON string to local storage
   localStorage.setItem('badgerStore', JSON.stringify(state))
 })
 

@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    ticks: []
+    ticks: [],
+    darkMode: false
   },
   mutations: {
     increment (state, n) {
@@ -15,6 +16,9 @@ export default new Vuex.Store({
     },
     decrement (state) {
       state.ticks.length > 0 ? state.ticks.pop() : (state.ticks = [])
+    },
+    toggleDarkMode (state, value) {
+      state.darkMode = value
     },
     reset (state) {
       state.ticks = []
